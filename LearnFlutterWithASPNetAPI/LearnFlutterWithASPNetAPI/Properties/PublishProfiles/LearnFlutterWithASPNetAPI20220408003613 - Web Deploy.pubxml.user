@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATF1P8FHzT0m+dj7VE+2r/gAAAAACAAAAAAAQZgAAAAEAACAAAABBGO3RWGosQi9wOh/SQIUW/g3thRPbonTbfjCebk6cgQAAAAAOgAAAAAIAACAAAABR4WnkCrex9jounjSS/0+GtXLy0KxmueMjvjydGBi4joAAAADgTL9p4JWROkpbntfB+q7s8J4QZIbUvQhPqkTACCzL8LlyO3MgKLM+RH12mOz6m0A7FYc1TWCsLXTXP4+8Vz82BUHbVV8b+f7K5A0AVm8nqkad2SnA61DWUvCFAXqjdb3ouVj9mOLOXFJSOfonwNfJzK9TRd/YTZqm4ZwEjtI0h0AAAAAn31hB4w0RxjjxogeOi3vTAJAxzNX+Y8FQE7mFpVcRhpWtfHmiZvuens6rD6BPJVO+gWC6XGs+mMKGadLhpnTm</EncryptedPassword>
+    <History>True|2022-04-07T17:41:36.5407775Z;True|2022-04-08T00:40:22.3567130+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="LearnFlutterWithASPNetAPI.Models.DatabaseContext">
+      <Value>Data Source=tcp:learnflutterwithaspnetcore.database.windows.net,1433%3bInitial Catalog=learnFlutterWithAPSNetCoreAPI%3bUser Id=learnflutter%40learnflutterwithaspnetcore%3bPassword=Code2022</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

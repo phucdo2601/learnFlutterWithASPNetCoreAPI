@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4A+C0rL9dZbQji1LeCoroQyZwhQVzCqcqz/su+f9EM0tzIx4KCHViDMJ88PpXNKPozEXqySMQj/7gqQIZ6yTnw==",
+  "dgSpecHash": "fky9rIhr/nc6jmfQvdUR/NS+GtQcUVTFeHB3mlb/RUrzpj3xjcOFIz1AscrYcvwQRIAQUmZgYLpCBwTeN1AK1w==",
   "success": true,
-  "projectFilePath": "D:\\TuHocLapTrinh\\flutter\\project\\learnFlutterWithASPNetCoreB01\\ASPNetCoreAPI\\learnFlutterWithASPNetCoreAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI.csproj",
+  "projectFilePath": "C:\\Users\\phucdn\\Documents\\Visual Studio 2022\\repo\\ASPNetCoreAPI\\learnFlutterWithASPNetCoreAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phucdn\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\phucdn\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

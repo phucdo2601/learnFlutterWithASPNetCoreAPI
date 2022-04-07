@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="LearnFlutterWithASPNetAPI20220408003613" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\phucdn\\Documents\\Visual\ Studio\ 2022\\repo\\ASPNetCoreAPI\\learnFlutterWithASPNetCoreAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="LearnFlutterWithASPNetAPI.Models.DatabaseContext" description="" value="Data Source=tcp:learnflutterwithaspnetcore.database.windows.net,1433;Initial Catalog=learnFlutterWithAPSNetCoreAPI;User Id=learnflutter@learnflutterwithaspnetcore;Password=Code2022" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\phucdn\\Documents\\Visual\ Studio\ 2022\\repo\\ASPNetCoreAPI\\learnFlutterWithASPNetCoreAPI\\LearnFlutterWithASPNetAPI\\LearnFlutterWithASPNetAPI\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\LearnFlutterWithASPNetAPI\.Models\.DatabaseContext\.sql$" />
+  </parameter>
+</parameters>
