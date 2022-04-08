@@ -34,4 +34,14 @@ class StudentService {
 
     return Future.value(response.statusCode == 200 ? true : false);
   }
+  
+  static Future<bool> deleteStudent(int id) async{
+    var client = http.Client();
+    String realId = id.toString();
+    var url = Uri.parse(
+        'https://learnflutterwithaspnetapi20220408003613.azurewebsites.net/api/Student?Id=$realId');
+    var response = await client.delete(url, headers: header);
+
+    return Future.value(response.statusCode == 200 ? true : false);
+  }
 }

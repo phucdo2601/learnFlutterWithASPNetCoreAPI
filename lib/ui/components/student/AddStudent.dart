@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_flutter_asp_net_api_b01/api/StudentService.dart';
 import 'package:learn_flutter_asp_net_api_b01/models/Student.dart';
 import 'package:learn_flutter_asp_net_api_b01/ui/components/general/MyAppBar.dart';
+import 'package:learn_flutter_asp_net_api_b01/ui/components/student/Students.dart';
 
 class AddStudent extends StatefulWidget {
   late Student student;
@@ -23,6 +24,12 @@ class _AddStudentState extends State<AddStudent> {
   //create list button
   final _gendersDropDownList = ["Male", "Female", "N/A"];
   String? selectedItem = "Male";
+  
+  final connectionIssueSnackbar = SnackBar(
+      content: Text(
+        "404, Connection Issue!"
+      )
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -103,15 +110,15 @@ class _AddStudentState extends State<AddStudent> {
                 onPressed: () {
                   saveStudent();
                 },
-                child: Text(
-                    "Save"
-                ),
+                child: updateSaveText(),
               ),
 
               RaisedButton(
                 textColor: Colors.red,
                 padding: EdgeInsets.all(10.0),
-                onPressed: () {},
+                onPressed: () {
+                  deleteStudent(student!.id);
+                },
                 child: Text(
                     "Delete"
                 ),
@@ -147,7 +154,7 @@ class _AddStudentState extends State<AddStudent> {
     student?.id = 0;
     var saveResponse = await StudentService.postStudent(student!);
 
-    saveResponse == true ? Navigator.pop(context, true) : null;
+    saveResponse == true ? Navigator.push(context,  MaterialPageRoute(builder: (context) => Students()),) : Scaffold.of(context).showSnackBar(connectionIssueSnackbar);
   }
 
   void updateFirstName() {
@@ -156,5 +163,18 @@ class _AddStudentState extends State<AddStudent> {
 
   void updateLastname() {
     student?.lastName = lastNameController.text;
+  }
+
+  void deleteStudent(int id) async{
+    var deleteStudent = await StudentService.deleteStudent(id);
+    // deleteStudent == true ? Navigator.pop(context, true) : Scaffold.of(context).showSnackBar(connectionIssueSnackbar);
+    print(deleteStudent);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Students()),);
+
+  }
+
+  Widget updateSaveText() {
+    return student!.id == null ? Text("Save") : Text("Update");
+
   }
 }
