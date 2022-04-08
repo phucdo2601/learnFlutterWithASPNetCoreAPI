@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_asp_net_api_b01/api/StudentService.dart';
 import 'package:learn_flutter_asp_net_api_b01/models/Student.dart';
 import 'package:learn_flutter_asp_net_api_b01/ui/components/general/MyAppBar.dart';
 
@@ -12,7 +13,7 @@ class AddStudent extends StatefulWidget {
 }
 
 class _AddStudentState extends State<AddStudent> {
-  late Student? student;
+   Student? student;
 
   _AddStudentState(this.student);
 
@@ -21,7 +22,7 @@ class _AddStudentState extends State<AddStudent> {
 
   //create list button
   final _gendersDropDownList = ["Male", "Female", "N/A"];
-  late String genderDownList = "N/A";
+  String? selectedItem = "Male";
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +49,7 @@ class _AddStudentState extends State<AddStudent> {
             style: TextStyle(
               color: Colors.black,
             ),
-            onChanged: null,
+            onChanged: (value) => updateFirstName(),
             decoration: InputDecoration(
                 labelText: "First Name",
                 border: OutlineInputBorder(
@@ -65,7 +66,7 @@ class _AddStudentState extends State<AddStudent> {
               style: TextStyle(
                 color: Colors.black,
               ),
-              onChanged: null,
+              onChanged: (value) => updateLastname(),
               decoration: InputDecoration(
                   labelText: "Last Name",
                   border: OutlineInputBorder(
@@ -75,14 +76,19 @@ class _AddStudentState extends State<AddStudent> {
           ),
           ListTile(
             title: DropdownButton<String>(
-              value: retriveGender(student!.gender),
-              onChanged: (value) => updateGender(value!),
+              value: selectedItem,
               items: _gendersDropDownList.map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
                 );
               }).toList(),
+              onChanged: (item){
+                setState(() {
+                  selectedItem = item;
+                  updateGender(selectedItem!);
+                });
+              },
               style: const TextStyle(color: Colors.deepPurple),
               // style: tex,
             ),
@@ -94,7 +100,9 @@ class _AddStudentState extends State<AddStudent> {
               RaisedButton(
                 textColor: Colors.blueAccent,
                 padding: EdgeInsets.all(10.0),
-                onPressed: () {},
+                onPressed: () {
+                  saveStudent();
+                },
                 child: Text(
                     "Save"
                 ),
@@ -117,9 +125,7 @@ class _AddStudentState extends State<AddStudent> {
     );
   }
 
-  String retriveGender(int value) {
-    return _gendersDropDownList[value - 1];
-  }
+
 
   void updateGender(String value) {
     switch (value) {
@@ -135,5 +141,20 @@ class _AddStudentState extends State<AddStudent> {
         break;
       default:
     }
+  }
+
+  void saveStudent() async{
+    student?.id = 0;
+    var saveResponse = await StudentService.postStudent(student!);
+
+    saveResponse == true ? Navigator.pop(context, true) : null;
+  }
+
+  void updateFirstName() {
+    student?.firstName = firstNameController.text;
+  }
+
+  void updateLastname() {
+    student?.lastName = lastNameController.text;
   }
 }

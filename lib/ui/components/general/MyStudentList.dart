@@ -4,8 +4,8 @@ import 'package:learn_flutter_asp_net_api_b01/ui/components/student/AddStudent.d
 
 class MyStudentList extends StatelessWidget implements PreferredSizeWidget {
 
-  late List<Student>? students;
-  late BuildContext? context;
+   List<Student>? students;
+   BuildContext? context;
 
   MyStudentList(this.students, this.context);
 
