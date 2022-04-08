@@ -83,7 +83,7 @@ class _AddStudentState extends State<AddStudent> {
           ),
           ListTile(
             title: DropdownButton<String>(
-              value: selectedItem,
+              value: retrieveGender(student!.gender),
               items: _gendersDropDownList.map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -108,7 +108,11 @@ class _AddStudentState extends State<AddStudent> {
                 textColor: Colors.blueAccent,
                 padding: EdgeInsets.all(10.0),
                 onPressed: () {
-                  saveStudent();
+                  if(student!.id == 0) {
+                    saveStudent();
+                  } else {
+                    updateStudent();
+                  }
                 },
                 child: updateSaveText(),
               ),
@@ -132,6 +136,9 @@ class _AddStudentState extends State<AddStudent> {
     );
   }
 
+   String retrieveGender(int value) {
+     return _gendersDropDownList[value -1];
+   }
 
 
   void updateGender(String value) {
@@ -174,7 +181,13 @@ class _AddStudentState extends State<AddStudent> {
   }
 
   Widget updateSaveText() {
-    return student!.id == null ? Text("Save") : Text("Update");
+    return student!.id == 0 ? Text("Save") : Text("Update");
 
+  }
+
+  void updateStudent() async{
+    var saveResponse = await StudentService.updateStudent(student!);
+
+    saveResponse == true ? Navigator.push(context,  MaterialPageRoute(builder: (context) => Students()),) : Scaffold.of(context).showSnackBar(connectionIssueSnackbar);
   }
 }

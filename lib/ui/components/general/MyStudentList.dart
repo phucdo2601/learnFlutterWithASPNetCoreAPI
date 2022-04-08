@@ -20,6 +20,10 @@ class MyStudentList extends StatelessWidget implements PreferredSizeWidget {
           elevation: 2.0,
           child: ListTile(
             title: ListTile(
+              leading: displayByGender(this.students![index].gender),
+              trailing: Icon(
+                Icons.arrow_forward_ios
+              ),
               title: Text(
                 students![index].firstName + " " + students![index].lastName,
               ),
@@ -44,4 +48,19 @@ class MyStudentList extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
+  Widget displayByGender(int gender) {
+    var male = Icon(
+      Icons.person,
+      color: Colors.blue,
+    );
+    var female = Icon(
+      Icons.pregnant_woman,
+      color: Colors.pink,
+    );
+    var otherSex = Icon(
+      Icons.battery_unknown,
+      color: Colors.green,
+    );
+    return gender == 1 ? male : gender == 2 ? female : otherSex;
+  }
 }

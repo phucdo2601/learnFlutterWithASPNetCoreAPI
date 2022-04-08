@@ -44,4 +44,17 @@ class StudentService {
 
     return Future.value(response.statusCode == 200 ? true : false);
   }
+
+  static Future<bool> updateStudent(Student student) async{
+    var client = http.Client();
+
+    var url = Uri.parse(
+        'https://learnflutterwithaspnetapi20220408003613.azurewebsites.net/api/Student');
+
+    var myStudent = student.toJson();
+    var studentBody = convert.json.encode(myStudent);
+    var response = await client.post(url, headers: header, body: studentBody);
+
+    return Future.value(response.statusCode == 200 ? true : false);
+  }
 }

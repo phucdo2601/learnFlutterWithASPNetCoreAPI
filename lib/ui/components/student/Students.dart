@@ -59,7 +59,7 @@ class _StudentState extends State<Students> {
         Icons.person_add,
       ),
       onPressed: () {
-        navigateToStudentDetail(Student.WithOutId("", "", 1));
+        navigateToStudentDetail(Student(id: 0, firstName: "", lastName: "", gender: 1));
       },
 
     );
