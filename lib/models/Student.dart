@@ -5,10 +5,10 @@ List<Student> studentFromJson(String str) => List<Student>.from(json.decode(str)
 String studentToJson(List<Student> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Student {
-  int id;
-  String firstName;
-  String lastName;
-  int gender;
+  late int id;
+  late String firstName;
+  late String lastName;
+  late int gender;
 
   Student({
     required this.id,
@@ -16,6 +16,9 @@ class Student {
     required this.lastName,
     required this.gender,
   });
+
+
+  Student.WithOutId(this.firstName, this.lastName, this.gender);
 
   factory Student.fromJson(Map<String, dynamic> json) => Student(
     id: json["id"],
