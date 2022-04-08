@@ -55,6 +55,10 @@ namespace LearnFlutterWithASPNetAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseSwagger();
+
+            /**
+             * Them cai nay o ngoai de khi deloy len thi duong dan se mac dinh vo api swagger
+             */
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "LearnFlutter v1");
@@ -63,7 +67,8 @@ namespace LearnFlutterWithASPNetAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BikeRescueBackEnd v1"));
+
             }
 
             app.UseHttpsRedirection();

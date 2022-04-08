@@ -66,7 +66,6 @@ C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWith
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\LearnFlutterWithASPNetAPI.runtimeconfig.json
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\LearnFlutterWithASPNetAPI.runtimeconfig.dev.json
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\LearnFlutterWithASPNetAPI.dll
-C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\ref\LearnFlutterWithASPNetAPI.dll
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\LearnFlutterWithASPNetAPI.pdb
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\Humanizer.dll
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
@@ -120,3 +119,4 @@ C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWith
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\obj\Debug\net5.0\ref\LearnFlutterWithASPNetAPI.dll
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\obj\Debug\net5.0\LearnFlutterWithASPNetAPI.pdb
 C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\obj\Debug\net5.0\LearnFlutterWithASPNetAPI.genruntimeconfig.cache
+C:\Users\phucdn\Documents\Visual Studio 2022\repo\ASPNetCoreAPI\learnFlutterWithASPNetCoreAPI\LearnFlutterWithASPNetAPI\LearnFlutterWithASPNetAPI\obj\Debug\net5.0\refint\LearnFlutterWithASPNetAPI.dll

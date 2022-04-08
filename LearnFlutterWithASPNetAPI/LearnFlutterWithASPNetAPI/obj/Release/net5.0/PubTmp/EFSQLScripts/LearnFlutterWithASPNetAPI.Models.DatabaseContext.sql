@@ -11,22 +11,22 @@ GO
 BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220406143324_DbInit')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220408024602_DbInit')
 BEGIN
     CREATE TABLE [student] (
-        [Id] int NOT NULL IDENTITY,
+        [id] int NOT NULL IDENTITY,
         [firstName] nvarchar(150) NULL,
         [lastName] nvarchar(150) NULL,
         [gender] int NOT NULL,
-        CONSTRAINT [PK_student] PRIMARY KEY ([Id])
+        CONSTRAINT [PK_student] PRIMARY KEY ([id])
     );
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220406143324_DbInit')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220408024602_DbInit')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220406143324_DbInit', N'5.0.15');
+    VALUES (N'20220408024602_DbInit', N'5.0.15');
 END;
 GO
 

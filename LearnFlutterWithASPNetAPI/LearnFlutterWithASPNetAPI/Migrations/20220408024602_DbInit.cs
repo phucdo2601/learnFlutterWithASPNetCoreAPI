@@ -10,7 +10,7 @@ namespace LearnFlutterWithASPNetAPI.Migrations
                 name: "student",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     firstName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     lastName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
@@ -18,7 +18,7 @@ namespace LearnFlutterWithASPNetAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_student", x => x.Id);
+                    table.PrimaryKey("PK_student", x => x.id);
                 });
         }
 

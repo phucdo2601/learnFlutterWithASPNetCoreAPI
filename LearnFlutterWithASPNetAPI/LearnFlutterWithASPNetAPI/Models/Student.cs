@@ -7,7 +7,7 @@ namespace LearnFlutterWithASPNetAPI.Models
     public class Student
     {
         [Key]
-        [Column("Id")]
+        [Column("id")]
         public int Id { get; set; }
         [Column("firstName")]
         [StringLength(150)]
