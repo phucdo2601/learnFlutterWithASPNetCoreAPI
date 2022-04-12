@@ -2,6 +2,7 @@
 using LearnFlutterWithASPNetAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -50,6 +51,12 @@ namespace LearnFlutterWithASPNetAPI.Controllers
             IQueryable<Student> data = _iStudent.GetAllStudents;
             return Ok(data);
         }
+        [HttpGet("/getListStudentAsync")]
+        public async Task<IActionResult> FindListStudentAsyncTestO1()
+        {
+            IEnumerable<Student> res = await _iStudent.GetListAllStudentAsync();
+            return Ok(res); 
+        }
 
         [HttpDelete]
         public async Task<IActionResult> DeleteStudentById(int? Id)
@@ -67,6 +74,8 @@ namespace LearnFlutterWithASPNetAPI.Controllers
 
             return Ok(model);
         }
+
+        
 
     }
 }

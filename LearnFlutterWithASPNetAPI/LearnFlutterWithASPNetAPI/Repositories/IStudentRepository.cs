@@ -1,4 +1,6 @@
 ﻿using LearnFlutterWithASPNetAPI.Models;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,5 +15,8 @@ namespace LearnFlutterWithASPNetAPI.Services
         Task<POJO> SaveStudent (Student student);
 
         Task<POJO> DeleteStudent (int? id);
+
+        Task<IEnumerable<Student>> GetListAllStudentAsync();
+
     }
 }

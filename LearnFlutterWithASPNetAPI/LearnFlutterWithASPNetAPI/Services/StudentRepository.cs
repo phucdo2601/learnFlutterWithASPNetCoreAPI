@@ -1,5 +1,7 @@
 ﻿using LearnFlutterWithASPNetAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -43,6 +45,11 @@ namespace LearnFlutterWithASPNetAPI.Services
                 model.Message = "Student does not exist.";
             }
             return model;
+        }
+
+        public async Task<IEnumerable<Student>> GetListAllStudentAsync()
+        {
+            return await _db.Students.ToListAsync();
         }
 
         public async Task<Student> GetStudent(int? id)
