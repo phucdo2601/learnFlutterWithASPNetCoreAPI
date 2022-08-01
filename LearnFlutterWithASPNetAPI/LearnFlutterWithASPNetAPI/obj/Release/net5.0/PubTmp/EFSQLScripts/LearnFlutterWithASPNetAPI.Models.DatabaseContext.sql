@@ -33,3 +33,28 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220801081903_update-field01')
+BEGIN
+    ALTER TABLE [student] ADD [Password] nvarchar(150) NULL;
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220801081903_update-field01')
+BEGIN
+    ALTER TABLE [student] ADD [Username] nvarchar(150) NULL;
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220801081903_update-field01')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20220801081903_update-field01', N'5.0.15');
+END;
+GO
+
+COMMIT;
+GO
+

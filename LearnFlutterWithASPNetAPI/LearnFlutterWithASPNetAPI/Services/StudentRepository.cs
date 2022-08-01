@@ -88,6 +88,8 @@ namespace LearnFlutterWithASPNetAPI.Services
                 Student entity = await GetStudent(student.Id);  
                 entity.Id = student.Id; 
                 entity.FirstName = student.FirstName;
+                entity.Username = student.Username;
+                entity.Password = student.Password;
                 entity.LastName = student.LastName;
                 entity.Gender = student.Gender;
 

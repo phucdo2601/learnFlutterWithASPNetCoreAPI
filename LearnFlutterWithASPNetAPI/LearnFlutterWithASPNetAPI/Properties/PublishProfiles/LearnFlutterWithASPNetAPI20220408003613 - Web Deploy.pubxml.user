@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATF1P8FHzT0m+dj7VE+2r/gAAAAACAAAAAAAQZgAAAAEAACAAAABBGO3RWGosQi9wOh/SQIUW/g3thRPbonTbfjCebk6cgQAAAAAOgAAAAAIAACAAAABR4WnkCrex9jounjSS/0+GtXLy0KxmueMjvjydGBi4joAAAADgTL9p4JWROkpbntfB+q7s8J4QZIbUvQhPqkTACCzL8LlyO3MgKLM+RH12mOz6m0A7FYc1TWCsLXTXP4+8Vz82BUHbVV8b+f7K5A0AVm8nqkad2SnA61DWUvCFAXqjdb3ouVj9mOLOXFJSOfonwNfJzK9TRd/YTZqm4ZwEjtI0h0AAAAAn31hB4w0RxjjxogeOi3vTAJAxzNX+Y8FQE7mFpVcRhpWtfHmiZvuens6rD6BPJVO+gWC6XGs+mMKGadLhpnTm</EncryptedPassword>
-    <History>True|2022-04-08T03:01:35.1888187Z;True|2022-04-08T09:47:17.3631586+07:00;True|2022-04-08T00:41:36.5407775+07:00;True|2022-04-08T00:40:22.3567130+07:00;</History>
+    <History>True|2022-08-01T08:30:03.1291152Z;True|2022-04-12T09:02:05.7093221+07:00;True|2022-04-08T10:01:35.1888187+07:00;True|2022-04-08T09:47:17.3631586+07:00;True|2022-04-08T00:41:36.5407775+07:00;True|2022-04-08T00:40:22.3567130+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <EFMigrations Include="LearnFlutterWithASPNetAPI.Models.DatabaseContext">

@@ -17,6 +17,12 @@ namespace LearnFlutterWithASPNetAPI.Models
         public string LastName { get; set; }
         [Column("gender")]
         public int Gender { get; set; }
+        [Column("Username")]
+        [StringLength(150)]
+        public  string Username { get; set; }
+        [Column("Password")]
+        [StringLength(150)]
+        public string Password { get; set; }
 
 
     }
